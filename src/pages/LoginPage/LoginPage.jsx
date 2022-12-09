@@ -45,10 +45,10 @@ function LoginPage() {
   };
 
   return (
-    <div className="LoginPage">
-      <h1>Login</h1>
+    <div className="loginPage container">
+      <h1 className="text-button">Login</h1>
 
-      <form onSubmit={handleLoginSubmit}>
+      {/* <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
@@ -65,8 +65,46 @@ function LoginPage() {
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Don't have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link>
+      <Link to={"/signup"}> Sign Up</Link> */}
+
+
+      <div className="container">
+        <div className="row justify-content-center align-items-center">
+        <div className="col-6 ">
+          <form onSubmit={handleLoginSubmit}>
+            <div className="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address:</label>
+              <input type="email"  name="email" value={email} onChange={handleEmail} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" className="form-label">Password</label>
+              <input 
+              type="password" 
+              name="password"
+              value={password}
+              onChange={handlePassword}class="form-control" id="exampleInputPassword1" />
+            </div>
+
+            {/* <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> */}
+            <button type="submit" className="btn btn-outline-ligth buttonStart">Submit</button>
+          </form>
+          </div>
+          
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+          <div className="container login-footer">
+            <p>Don't have an account yet?</p>
+            <Link to={"/signup"}> <button className="btn btn-outline-ligth buttonStart">Sign Up</button></Link>
+          </div>
+          
+        </div>
+      </div>
     </div>
+    
+    
   );
 }
 

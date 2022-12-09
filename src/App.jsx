@@ -5,10 +5,12 @@ import HomePage from "./pages/HomePage/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-
+import PostsListPage from "./pages/PostsListPage/PostsListPage"
+import PostDetails from "./pages/PostDetails/PostDetails"
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
 import IsAnon from "./components/IsAnon/IsAnon";
+import NewPost from "./pages/NewPost/NewPost";
 
 function App() {
   return (
@@ -26,7 +28,7 @@ function App() {
             </IsPrivate>
           }
         />
-{/* IsPrivate es que profile esta en props.children */}
+          {/* IsPrivate es que profile esta en props.children */}
         <Route
           path="/signup"
           element={
@@ -43,6 +45,9 @@ function App() {
             </IsAnon>
           }
         />
+        <Route path="/posts" element={<PostsListPage />}/>
+        <Route path="/posts/:id" element={<PostDetails />} />
+        <Route path="/new-post" element={<NewPost />} />
       </Routes>
     </div>
   );

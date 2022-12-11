@@ -1,0 +1,15 @@
+/* .fondo-color{
+background-color: darkcyan;
+}
+.fondo-color2{
+    background-color: rgb(139, 0, 139);
+}
+.fondo-color3{
+    background-color: rgb(76, 139, 0);
+}
+.fondo-color4{
+    background-color: rgb(53, 139, 0);
+} */
+.bordeShadow:hover{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,39 @@
+.buttonForm{
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    margin-left: 10px;
+    
+}
+.probando{
+    background-color: blueviolet;
+
+}
+.probando2{
+    
+    padding-left: 10vw;
+    padding-right: 0vw;
+}
+.probando3{
+    background-color: brown;
+}
+
+.signUp-pic{
+    width: 15rem;
+    height: 15rem;
+}
+.borderPic{
+    border-radius: 80% 10% 10% 10%;
+}
+.borderPic2{
+    border-radius: 10% 80% 10% 10%;
+}
+.borderPic3{
+    border-radius: 10% 10% 10% 80%;
+}
+.borderPic4{
+    border-radius: 10% 10% 80% 10%;
+}
+.dateInput{
+    width: 80%;
+}

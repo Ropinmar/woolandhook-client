@@ -1,3 +1,15 @@
-.padding-card{
-    margin: 5px;
+
+.probando{
+    background-color: blueviolet;
+}
+.probando20{
+    background-color:crimson;
+}
+.picForCard{
+    height: 100px!important;
+    width: 10rem!important;
+    
+}
+.picForCard2{
+    height: 200px;
 }

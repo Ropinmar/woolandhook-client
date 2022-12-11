@@ -73,22 +73,22 @@ function LoginPage() {
         <div className="col-6 ">
           <form onSubmit={handleLoginSubmit}>
             <div className="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address:</label>
+              <label htmlFor="exampleInputEmail1" className="form-label">Email address:</label>
               <input type="email"  name="email" value={email} onChange={handleEmail} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
             </div>
 
-            <div class="mb-3">
-              <label for="exampleInputPassword1" className="form-label">Password</label>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
               <input 
               type="password" 
               name="password"
               value={password}
-              onChange={handlePassword}class="form-control" id="exampleInputPassword1" />
+              onChange={handlePassword}className="form-control" id="exampleInputPassword1" />
             </div>
 
-            {/* <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            {/* <div className="mb-3 form-check">
+              <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+              <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
             </div> */}
             <button type="submit" className="btn btn-outline-ligth buttonStart">Submit</button>
           </form>

@@ -1,15 +1,20 @@
 
-.probando{
-    background-color: blueviolet;
+.fondo{
+    background-color: blue;
 }
-.probando20{
-    background-color:crimson;
+.fondo2{
+    background-color: chocolate;
+}
+.fondo3{
+    background-color: darkviolet;
 }
 .picForCard{
-    height: 100px!important;
-    width: 10rem!important;
-    
+    height: 18rem!important;
+    width: 21rem!important;  
 }
 .picForCard2{
     height: 200px;
+}
+.shadowBorde:hover{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }

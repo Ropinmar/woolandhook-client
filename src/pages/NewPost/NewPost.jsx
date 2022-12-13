@@ -44,9 +44,13 @@ const NewPost = () => {
   return (
     // form to create a new post
     <div className="container row-12 d-flex h-100">
-        <div className="col-7 justify-content-center align-items-center mt-5 probando2">
+
+        <div className="col-7 justify-content-center align-items-center mt-5 probando2 borderShadow">
             <form className="col-12 g-4 justify-content-center align-items-center " onSubmit={handleSubmit}>
 
+                <div className="col-8 mb-3">
+                    <h4>New Post!</h4>
+                </div>
                 <div className="col-8 mb-3">
                     <label htmlFor="titleInput" className="form-label">Title:</label>
                     <input 
@@ -119,7 +123,7 @@ const NewPost = () => {
 
 
 
-        <div className="row mt-3 container flex-column">
+        <div className="row mt-5 container flex-column borderShadow">
 
 
             <div className="row">
@@ -138,7 +142,7 @@ const NewPost = () => {
                 <div className="col-6 p-0 m-0">
                     <img src="./images/signup-pic3.jpg" alt="" className="img-fluid signUp-pic borderPic4"></img>
                 </div>
-                </div>
+            </div>
         </div>
     </div>
   )

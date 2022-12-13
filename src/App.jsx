@@ -14,6 +14,10 @@ import NewPost from "./pages/NewPost/NewPost";
 import MainPage from "./pages/MainPage/MainPage";
 import NewComment from "./pages/NewComment/NewComment";
 import EditPost from "./pages/EditPost.jsx/EditPost";
+import EventList from "./pages/EventList/EventList";
+import NewEvent from "./pages/NewEvent/NewEvent";
+import EditEvent from "./pages/EditEvent/EditEvent";
+
 
 function App() {
   return (
@@ -49,14 +53,17 @@ function App() {
             </IsAnon>
           }
         />
+        <Route path="/main" element={<MainPage />}/>
         <Route path="/profile" element={<ProfilePage />}/>
+        <Route path="/new-post" element={<NewPost />} />
         <Route path="/posts" element={<PostsListPage />}/>
         <Route path="/posts/:id" element={<PostDetails />} />
-        <Route path="/new-post" element={<NewPost />} />
         <Route path="/edit-post/:postId" element={<EditPost />} />
-        <Route path="/main" element={<MainPage />} />
+        <Route path="/events" element={<EventList /> } />
+        <Route path="/new-event" element={<NewEvent/> } />
+        <Route path="/edit-event/:id" element={<EditEvent /> } />
         <Route path="/new-comment" element={<NewComment />}/>
-        
+                
       </Routes>
     </div>
   );

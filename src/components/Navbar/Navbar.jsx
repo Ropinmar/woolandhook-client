@@ -7,91 +7,116 @@ function Navbar() {
   // Subscribe to the AuthContext to gain access to
   // the values from AuthContext.Provider's `value` prop
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+  
+  // console.log(user)
 
   return (
-    // <nav className="navbar navbar-expand-lg bg-light">
-    //     <div className="container-fluid">
-    //       <Link to="/">
-    //         <button className="navbar-toggler" type="button" data-bs-toggle="collapse">Home</button>
-    //       </Link>
+    <div className="row  align-items-center justify-content-center">
 
-    //       {isLoggedIn && (
-    //         <>
-    //           <button onClick={logOutUser}>Logout</button>
+          <nav className="navbar navbar-expand-md navbar-light  col-10">
+            
+             
+              <div className="collapse navbar-collapse align-items-center justify-content-center container d-flex" id="navbarNav">
+                  <div className="col-3 d-flex align-items-center justify-content-center ">
+                    <p className="project-name">Wool and <br></br>Hook</p>
+                    <a className="navbar-brand" href="/">
+                          <img src="/images/main-icono.webp" width="30" alt="logo" />
+                    </a>
+                  </div>
+                  <div className="col-4 d-flex align-items-center justify-content-center ">     
+                  <ul className="navbar-nav d-flex justify-content-center align-items-center">
+                      <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="/main"><h5 className="text-navbar">Home</h5></a>
+                      </li>
+                  {!isLoggedIn && (   
+                    <>
+                      <li className="nav-item">
+                        <a className="nav-link active" href="/signup"><h5 className="text-navbar">Sign up</h5></a>
+                      </li>
 
-    //           <Link to="/profile">
-    //             <button>Profile</button>
-    //             {/* <img src="https://picsum.photos/id/402/200/300" style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" /> */}
-    //           </Link>
+                      <li className="nav-item">
+                        <a className="nav-link active" href="/login"><h5 className="text-navbar">Login</h5></a>
+                      </li>
+                      </>
+                    )}   
+                  </ul>
+                  </div> 
 
-    //           <span>{user && user.name}</span>
-    //         </>
-    //       )}
+                  {isLoggedIn && (
+                    <>
+                        <div className="col-4 d-flex  align-items-center justify-content-center">
+                          
+                          <span className="nav-item">
+                              <img src={user.profilePic} style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" />
+                            </span>
+                          
+                          <span className="nav-item">{user.name}</span>
+                        
+                          <li className="dropdown-item">
+                            <hr className="dropdown-divider"/>
+                          </li>
+                          <span className="dropdown nav-item">
+                        
+                            <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navigate
+                            </a>
+                            
+                            <ul className="dropdown-menu">
+                                    
+                                    <li>
+                                      <a className="text-navbar dropdown-item" href="/profile">Profile</a>
+                                    </li>
+                                    <li>
+                                      <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                      <a className="dropdown-item text-navbar" href="/new-post">New Post</a>
+                                    </li>
+                                    <li>
+                                      <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                    <a className="dropdown-item text-navbar" href="/posts">Posts</a>
+                                    </li>
 
-    //       {!isLoggedIn && (
-    //         <>
-    //           <Link to="/signup">
-    //             {" "}
-    //             <button>Sign Up</button>{" "}
-    //           </Link>
-    //           <Link to="/login">
-    //             {" "}
-    //             <button>Login</button>{" "}
-    //           </Link>
-    //         </>
-    //       )}
-    //     </div>
-          
-    // </nav>
-      
-      <nav className="navbar navbar-expand-md navbar-light bg-color">
-          <div className="container-fluid d-flex">
-            <h3 className="project-name">Wool and Hook</h3>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse move-rigth" id="navbarNav">
-              <a className="navbar-brand" href="/">
-                  <img src="/images/main-icono.webp" width="50" alt="logo" className="iconoPage"/>
-              </a>
-              <ul className="navbar-nav d-flex justify-content-center align-items-center">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/main"><h5 className="text-navbar">Home</h5></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="/posts"><h5 className="text-navbar">Posts</h5></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="/signup"><h5 className="text-navbar">Sign up</h5></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="/login"><h5 className="text-navbar">Login</h5></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="/new-post"><h5 className="text-navbar">New Post</h5></a>
-                </li>
-                
-              </ul>
-              <button onClick={logOutUser}>Logout</button>
-          {isLoggedIn && (
-             <>
-               
+                                    <li>
+                                      <hr className="dropdown-divider"/>
+                                    </li>
+                                    
+                                    <li>
+                                      <a className="text-navbar dropdown-item" href="/new-event">New Event</a>
+                                    </li>
+                                    
+                                    <li>
+                                      <hr className="dropdown-divider"/>
+                                    </li>
+                                    
+                                    <li>
+                                      <a className="text-navbar dropdown-item" href="/events">Events</a>
+                                    </li>
 
-               <Link to="/profile">
-                 <button>Profile</button>
-                 {/* <img src="https://picsum.photos/id/402/200/300" style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" /> */}
-               </Link>
+                                    <li>
+                                      <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <h6 onClick={logOutUser} className="dropdown-item text-navbar">Logout</h6>
+                                    </li>
+                              </ul>
+                          </span>
+                        </div>
+                    </>
+                  )}
+              </div>
+              
 
-               <span>{user && user.name}</span>
-             </>
-          )}
-            </div>
-          </div>
-        </nav>
-        
-   
-    
+           
+          </nav>
+    </div>    
   );
 }
 
 export default Navbar;
+
+
+        
+   

@@ -1,0 +1,16 @@
+.carousel, .carousel-inner > .carousel-item > img {
+    height: 500px;
+    width: 80%;
+  }
+  .color1{
+    background-color: darkgoldenrod;
+  }
+  .color2{
+    background-color: aqua;
+  }
+  .textSlide{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .borderShadow{
+    border: 1px 1px 1px 1px black;
+  }

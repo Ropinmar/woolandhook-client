@@ -5,13 +5,9 @@
     display: flex;
     justify-content: space-evenly;
   }
-  
-  .bg-color{
-    background-color: #E1E3C6;
-    color: black;
-  }
   .project-name{
     font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
   }
   .text-navbar{
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
@@ -20,6 +16,18 @@
     display: flex!important;
     justify-content: flex-end;
   }
-  .iconoPage{
-    color: white;
+  .color1{
+    background-color: darkslateblue;
+  }
+  .color2{
+    background-color: rgb(15, 97, 27);
+  }
+  .color3{
+    background-color: rgb(117, 10, 48);
+  }
+  .color4{
+    background-color: rgb(194, 179, 10);
+  }
+  .color5{
+    background-color: rgb(194, 28, 10);
   }

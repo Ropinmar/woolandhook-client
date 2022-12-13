@@ -23,17 +23,20 @@
     height: 15rem;
 }
 .borderPic{
-    border-radius: 80% 10% 10% 10%;
+    border-radius: 50% 0% 0% 50%;
 }
 .borderPic2{
-    border-radius: 10% 80% 10% 10%;
+    border-radius: 50% 50% 0% 0%;
 }
 .borderPic3{
-    border-radius: 10% 10% 10% 80%;
+    border-radius: 0% 0% 50% 50%;
 }
 .borderPic4{
-    border-radius: 10% 10% 80% 10%;
+    border-radius: 0% 50% 50% 0%;
 }
 .dateInput{
     width: 80%;
+}
+.borderShadow:hover{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
 }

@@ -6,17 +6,26 @@ section{
     align-items: center;
     justify-content: center;
 }
-.picHomePage{
-    width: 300px;
-    height: 300px;
+.picHomeSize{
+    width: 230px;
+    height: 230px;
     margin:20px;
-    border-radius: 0% 50%  0% 50%;
+}
+.picHomePage{
+    border-radius: 0% 90%  0% 50%;
+    border: 2px solid rgb(72, 65, 65);
 }
 .picHomePage2{
-    width: 300px;
-    height: 300px;
-    margin:20px;
-    border-radius: 50% 0% 50% 0%;
+    border-radius: 90% 0% 50% 0%;
+    border: 2px solid rgb(72, 65, 65);
+}
+.picHomePage3{
+    border-radius: 50% 0% 90% 0%;
+    border: 2px solid rgb(72, 65, 65);
+}
+.picHomePage4{
+    border-radius: 0% 50% 0% 90%;
+    border: 2px solid rgb(72, 65, 65);
 }
 .linkHome{
     text-decoration:none;
@@ -25,6 +34,47 @@ section{
     color: black;
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
 }
+.text-next-button{
+    color: black;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+.text-button:hover{
+    color: white;
+}
+.buttonStart{
+    width: 5em;
+}
 .buttonStart:hover{
-    background-color: aquamarine;
+    background-color: rgb(207, 85, 9);
+   
+    
+}
+.bordeShadow{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.probando{
+    background-color: cadetblue;
+}
+.probando2{
+    background-color: rgb(107, 160, 95);
+}
+.probando3{
+    background-color: rgb(182, 73, 30);
+}
+.backgroundCover{
+    background-image: linear-gradient(135deg, #787878, #33BACC, #6298B8, #00444D, #5A4894, #828C37, #806165);
+    background-size: 500%;
+    animation: fanimado 20s infinite ;
+}
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }

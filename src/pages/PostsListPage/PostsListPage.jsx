@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import NewComment from '../NewComment/NewComment';
+import "./PostsListPage.css"
 
 
 const API_URL = process.env.REACT_APP_SERVER_URL;
-console.log(API_URL)
+// console.log(API_URL)
 const PostsListPage = (props) => {
   const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
@@ -41,7 +43,9 @@ const PostsListPage = (props) => {
       console.log("Delete -->", post._id)
     //connect to server
     await axios.delete(`${API_URL}/api/posts/${post._id}`);
-    navigate("/posts")
+    // navigate("/posts")
+    const newPosts = posts.filter(p => p._id !== post._id);
+    setPosts(newPosts);
     }
     catch(err){
       console.log(err)
@@ -66,32 +70,24 @@ const PostsListPage = (props) => {
     <div  className="container-fluid row justify-content-center">
       {posts.map((post, index) => {
         return(
-          <div key={post._id} className="col-sm-4 mt-3">
-            {/* <Link to={`/posts/${post._id}`}>
-              <h3>{post.title}</h3>
-              <h4>{post.wovenCraft}</h4>
-              <p>{post.text}</p>
-              <img src={post.image} alt="postPic"/>
-            </Link> */}
-            
+          <div key={post._id} className="col-sm-3 m-4 p-0">            
               
-                <div className="card text-start">
-                  <div className="text-center"></div>
-                  <img src={post.image} className="card-header picForCard " alt="postPic"/>
+                <div className="card text-start shadowBorde">
                   
+                    <img src={post.image} className="card-header picForCard" alt="postPic"/>
                   
                   <div className="card-body">
                     {/* <Link to={`/posts/${post._id}`}>
                     </Link> */}
                     
                     <h2 className="card-title">{post.title}</h2>
-                    <h4>{post.author} - {post.wovenCraft}</h4>
+                    <h4><strong>{post.author} </strong>- {post.wovenCraft}</h4>
                     
                     <p className="card-text">{post.text}</p>
 
                     <div className="d-flex justify-content-between">
 
-                      <h6 onClick={() => handleShowComments(index)} className="card-link">Comments</h6>
+                      <button className="btn border" onClick={() => handleShowComments(index)} >Comments</button>
 
                       {post.showComments &&
                       <>
@@ -128,6 +124,7 @@ const PostsListPage = (props) => {
                   </div>
                   <div className="card-footer text-muted">
                     <h6>{post.date}</h6>
+                    <NewComment />
                   </div>
                     
                   

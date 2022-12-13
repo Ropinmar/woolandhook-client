@@ -14,13 +14,16 @@ const NewComment = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post(`${API_URL}/api/comments`,{content, post: idPost})
-        .then(() => navigate(`/posts/${idPost}`))
+        // .then(() => console.log(idPost))
+        // .then((respuesta) => respuesta.json())
+        .then(() => navigate(`/posts`))
         .catch(console.log)
     }
 
     const getPosts = async () => {
         try{
-            const allPosts= await axios.get(`${API_URL}/api/posts`);
+            //get posts
+            const allPosts = await axios.get(`${API_URL}/api/posts`);
             setPosts(allPosts.data);
             setIdPost(allPosts.data[0]._id);
         }

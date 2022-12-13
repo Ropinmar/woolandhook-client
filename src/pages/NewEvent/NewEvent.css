@@ -1,0 +1,13 @@
+.size-pic-event{
+    width: 200px;
+    height: 200px;
+}
+.forLeft{
+    border-radius: 90% 10% 90% 60%;
+}
+.forRight{
+    border-radius: 10% 90% 60% 90%;
+}
+.forDown{
+    border-radius: 30% 80% 5% 5%;
+}

@@ -70,9 +70,9 @@ const PostsListPage = (props) => {
     <div  className="container-fluid row justify-content-center">
       {posts.map((post, index) => {
         return(
-          <div key={post._id} className="col-sm-3 m-4 p-0">            
+          <div key={post._id} className="col-md-3 m-4 ms-3 p-2 fondo rounded">            
               
-                <div className="card text-start shadowBorde">
+                <div className="card text-start shadowBorde p-1">
                   
                     <img src={post.image} className="card-header picForCard" alt="postPic"/>
                   
@@ -87,19 +87,26 @@ const PostsListPage = (props) => {
 
                     <div className="d-flex justify-content-between">
 
-                      <button className="btn border" onClick={() => handleShowComments(index)} >Comments</button>
-
+                      <p>
+                        <a className="btn btn-primary collapsed" data-bs-toggle="collapse" href={post._id} role="button"  aria-controls="CollapseExample1" onClick={() => handleShowComments(index)}>Comments</a>
+                      </p>
+                    
                       {post.showComments &&
-                      <>
+                        <>
                         {post.comments.map((comment) => {
                           return (
-                            <div>
-                            <h5 key={comment._id}>{comment.content}</h5>
+                        <div className="row">
+                          <div className="-collapse collapse" id={post._id} >
+                            <div className="card card-body" key={comment._id}>
+                             <h1>{comment.content}</h1>
                             </div>
-                            )
-                        })}
+                          </div>
+                        </div>
+                        )
+                      })}
                       </>
                       }
+
                       {/* <p className="card-text">{post.comments}</p> */}
                       <div>
                         <Link to={`/edit-post/${post._id}`}>

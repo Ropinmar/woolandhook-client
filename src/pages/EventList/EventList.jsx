@@ -8,7 +8,7 @@ const API_URL = process.env.REACT_APP_SERVER_URL;
 
 const EventList = (props) => {
     const [events, setEvents] = useState([]);
-    const { id } = useParams();
+    const { eventId } = useParams();
     const navigate = useNavigate();
 
     const getEvents = () => {
@@ -34,21 +34,21 @@ const EventList = (props) => {
     }
 
     useEffect(() => {
-        getEvents();
-    }, []);
+        getEvents(eventId);
+    }, [eventId]);
 
   return (
     <div>
     {events.map((event, id) => {
         return (
-            <div className="container-fluid d-flex justify-content-center align-items-center p-3">
+            <div className="container-fluid d-flex justify-content-center align-items-center p-3 fondoEvents">
                 <div key={event._id} className="col-8">
-                    <div className="card m-3 border-0 bordeShadow">
+                    <div className="card m-3 border-0 bordeShadow bordeEvent">
                         <div className="row g-0 p-3">
-                            <div className="col-md-4 bordeShadow">
+                            <div className="col-md-4 bordeShadow bordeEvent2">
                                 <img src={event.eventPic} className="img-thumbnail rounded-start w-75" alt="eventPic" />
                             </div>
-                            <div className="col-md-8 bordeShadow">
+                            <div className="col-md-8 bordeShadow bordeEvent2">
                                 <div className="card-body">
                                 <h5 className="card-title">{event.title}</h5>
                                 <p className="card-text">{event.description}</p>

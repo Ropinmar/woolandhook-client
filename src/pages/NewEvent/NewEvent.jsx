@@ -21,6 +21,7 @@ const NewEvent = () => {
       //send to server
       const newEvent = await axios.post(`${API_URL}/api/events`,{title, description, date, materials, eventPic})
       //send to all events
+      console.log(newEvent);
       navigate(`/events`);
     }
     catch(err){
@@ -28,10 +29,10 @@ const NewEvent = () => {
     }
   }
   return (
-    <div className="container row-12 d-flex h-100">
+    <div className="container-fluid row-12 d-flex h-100 w-100 fondoNewevent">
 
 
-      <div className="row mt-5 container flex-column borderShadow">
+      <div className="row mt-5 mb-5 p-5 container flex-column borderShadow">
 
 
           <div className="row">
@@ -49,7 +50,7 @@ const NewEvent = () => {
           </div>
       </div>
     
-      <div className="col-6  justify-content-center align-items-center mt-5  borderShadow ps-5">
+      <div className="col-6  justify-content-center align-items-center mt-5 mb-5 borderShadow ps-5">
             <form className="col-12 g-4 justify-content-center align-items-center ps-5" onSubmit={handleSubmit}>
 
                 <div className="col-8 mb-3">
@@ -65,11 +66,10 @@ const NewEvent = () => {
                 </div>
 
                 <div className="col-8 mb-3">
-                    <label htmlFor="descriptionInput" className="form-label">Description</label>
+                    <label htmlFor="descriptionInput" className="form-label">Description:</label>
                     <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="Crochet, Macrame or knitting" 
                     id="descriptionInput"
                     name="description"
                     value={description}

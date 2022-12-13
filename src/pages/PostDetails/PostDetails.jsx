@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-
+import "./PostDetails.css"
 const PostDetails = (props) => {
     const [post, setPost] = useState(null);
     const { id } = useParams();

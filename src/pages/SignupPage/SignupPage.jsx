@@ -55,38 +55,16 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage">
-      <h1>Sign Up</h1>
+    <div className="container-fluid row colorFondo2 d-flex justify-content-center align-items-center">
 
-      {/* <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
-
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
-
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
-
-        <button type="submit">Sign Up</button>
-      </form>
-
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-      <p>Already have account?</p>
-      <Link to={"/login"}> Login</Link> */}
-
-
-
-      <form className="col-12 g-4 justify-content-center align-items-center " onSubmit={handleSignupSubmit}>
-
-                <div className="col-8 mb-3">
-                    <label htmlFor="nameInput" className="form-label">Name:</label>
+      <div className="col-6 fondoSignup d-flex justify-content-center align-items-center p-3 px-4 m-3 rounded">
+      <form className="row justify-content-center colorFondo2 p-4" onSubmit={handleSignupSubmit}>
+                    
+                <div className="col-12 mb-1">
+                    <h1>Sign Up</h1>
+                </div>
+                <div className="col-5 mb-1">
+                    <label htmlFor="nameInput" className="form-label col-3">Name:</label>
                     <input 
                     type="text" 
                     className="form-control" 
@@ -97,7 +75,7 @@ function SignupPage() {
                     onChange={handleName}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-5 mb-1">
                     <label htmlFor="lastnameInput" className="form-label">Lastname:</label>
                     <input 
                     type="text" 
@@ -109,7 +87,7 @@ function SignupPage() {
                     onChange={handleLastName}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-5 mb-1">
                     <label htmlFor="emailInput" className="form-label">Email:</label>
                     <input 
                     type="email" 
@@ -121,7 +99,7 @@ function SignupPage() {
                     onChange={handleEmail}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-5 mb-1">
                     <label htmlFor="passwordInput" className="form-label">Password:</label>
                     <input 
                     type="password" 
@@ -133,7 +111,7 @@ function SignupPage() {
                     onChange={handlePassword}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-5 mb-1">
                     <label htmlFor="picInput" className="form-label">Image</label>
                     <input 
                     type="text" 
@@ -146,7 +124,7 @@ function SignupPage() {
                     
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-5 mb-1">
                     <label htmlFor="aboutInput" className="form-label">About you:</label>
                     <input 
                     type="text" 
@@ -159,8 +137,8 @@ function SignupPage() {
                 </div>
 
 
-                <div className="col-8 buttonForm">
-                    <div className="mb-3 dateInput">
+                <div className="col-5 buttonForm">
+                    <div className="mb-1 dateInput">
                         <label htmlFor="dateOfBirthInput" className="form-label">Date:</label>
                         <input 
                         className="form-control" 
@@ -178,7 +156,13 @@ function SignupPage() {
                 </div>
 
             </form>
+            
             {errorMessage && <p className="error-message">{errorMessage}</p>}
+            </div>
+            <br></br>
+            <div className="col-8 m-2">
+              <button>buenas</button>
+            </div>
     </div>
   );
 }

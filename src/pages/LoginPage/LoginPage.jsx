@@ -45,7 +45,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="loginPage container">
+    <div className="loginPage row m-0 p-5 mb-5 container-fluid">
       <h1 className="text-button">Login</h1>
 
       {/* <form onSubmit={handleLoginSubmit}>
@@ -68,7 +68,7 @@ function LoginPage() {
       <Link to={"/signup"}> Sign Up</Link> */}
 
 
-      <div className="container">
+      <div className="container fondoLogin col-6">
         <div className="row justify-content-center align-items-center">
         <div className="col-6 ">
           <form onSubmit={handleLoginSubmit}>
@@ -95,9 +95,9 @@ function LoginPage() {
           </div>
           
           {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <div className="container login-footer">
+          <div className="container-fluid login-footer col-7">
             <p>Don't have an account yet?</p>
-            <Link to={"/signup"}> <button className="btn btn-outline-ligth buttonStart">Sign Up</button></Link>
+            <Link to={"/signup"}> <button className="btn btn-outline-ligth btn-lg buttonStart">Sign Up</button></Link>
           </div>
           
         </div>

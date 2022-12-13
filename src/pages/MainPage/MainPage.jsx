@@ -3,7 +3,7 @@ import "./MainPage.css"
 import { Link } from "react-router-dom";
 const MainPage = () => {
   return (
-    <div className="container-fluid pt-5 ">
+    <div className="container-fluid pt-5 fondoMainpage">
 
       <div className="container col w-75 bordeShadow">
             <div id="carouselExampleCaptions" className="carousel slide w-100 d-flex justify-content-center align-items-center" data-bs-ride="false">
@@ -57,13 +57,19 @@ const MainPage = () => {
       </div>
           <br></br>
         <div className="row d-flex justify-content-around align-items-center mt-5">
-          <div className="col-5 ">
+          <div className="col-5 bordeColor p-2 pb-1">
             <div className="card mb-3 border-0 bordeShadow">
                 <div className="row g-0">
                   <div className="col-md-6">
+                  
                     <img src="https://images.unsplash.com/photo-1562469162-c17fc5155156?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="img-thumbnail rounded-start" alt="eventPic" />
+                    <div>
+                      <Link to="/new-event" className="noStyle">
+                        <button className="btn border border-dark">Program an event</button>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-6 bordeShadow">
                     <div className="card-body">
                       <h5 className="card-title">Your project name</h5>
                       <p className="card-text">Description</p>
@@ -74,19 +80,16 @@ const MainPage = () => {
                   </div>
                 </div>
               </div>
-              <div>
-                <Link to="/new-event">
-                  <button className="btn border border-dark">Program an event</button>
-                </Link>
-              </div>
+              
           </div>
           
-      
-            <div className="card text-start col-4 ">
+            <div className="col-3 bordeColor p-2 rounded">
+            <div className="card text-start">
                   <div className="text-center"></div>
+                  <Link to="/new-post">
                   <img src="https://images.unsplash.com/photo-1562469162-c17fc5155156?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-header picForCard" alt="postPic"/>
                   
-                  
+                  </Link>
                   <div className="card-body">
                     
                     <h2 className="card-title">Post title</h2>
@@ -120,6 +123,7 @@ const MainPage = () => {
                     </div>
 
                   </div>
+          </div>
           </div>
           </div>
     </div>

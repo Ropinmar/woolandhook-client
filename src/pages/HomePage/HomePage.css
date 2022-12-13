@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'IBM Plex Sans Devanagari', sans-serif;;
+}
+.fondoText{
+    background-color: #E1E3C6;
+}
 section{
     display: flex;
     flex-direction: column;
@@ -7,8 +15,8 @@ section{
     justify-content: center;
 }
 .picHomeSize{
-    width: 230px;
-    height: 230px;
+    width: 210px;
+    height: 200px;
     margin:20px;
 }
 .picHomePage{
@@ -38,8 +46,12 @@ section{
     color: black;
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
 }
+.text-next-button:hover{
+    color: white;
+}
 .text-button:hover{
     color: white;
+    cursor: pointer;
 }
 .buttonStart{
     width: 5em;
@@ -53,13 +65,13 @@ section{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .probando{
-    background-color: cadetblue;
+    background-color: rgb(159, 160, 95);
 }
 .probando2{
     background-color: rgb(107, 160, 95);
 }
-.probando3{
-    background-color: rgb(182, 73, 30);
+.borderColor{
+    background-color: #ABA95C;
 }
 .backgroundCover{
     background-image: linear-gradient(135deg, #787878, #33BACC, #6298B8, #00444D, #5A4894, #828C37, #806165);
@@ -77,4 +89,13 @@ section{
     100%{
         background-position: 0% 50%;
     }
+}
+.bordePic{
+    background-color: #E1E3C6;
+}
+.dark{
+    background-color: #293737;
+}
+.fill-white{
+    background-color: white;
 }

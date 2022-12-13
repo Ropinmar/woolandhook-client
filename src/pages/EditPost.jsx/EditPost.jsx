@@ -26,7 +26,7 @@ const EditPost = (props) => {
       setDate(editPost.date);
     })
     .catch(console.log);
-  }, [postId])
+  }, [postId]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -109,7 +109,7 @@ const EditPost = (props) => {
                     
 
                     <div className=''>
-                        <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Create</button>
+                        <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Edit!</button>
                     </div>
                 </div>
 

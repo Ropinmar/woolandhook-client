@@ -17,7 +17,7 @@
     justify-content: flex-end;
   }
   .color1{
-    background-color: darkslateblue;
+    background-color: yellow;
   }
   .color2{
     background-color: rgb(15, 97, 27);
@@ -30,4 +30,14 @@
   }
   .color5{
     background-color: rgb(194, 28, 10);
+  }
+  .fondoNavbar{
+    background-color: #AB5C61;
+  }
+  .borderPic{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .nameUser{
+    text-decoration: none;
+    color: black;
   }

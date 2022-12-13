@@ -1,5 +1,11 @@
-/* .fondo-color{
-background-color: darkcyan;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'IBM Plex Sans Devanagari', sans-serif;;
+}
+.fondo-color{
+background-color: #ABA95C;
 }
 .fondo-color2{
     background-color: rgb(139, 0, 139);
@@ -9,11 +15,14 @@ background-color: darkcyan;
 }
 .fondo-color4{
     background-color: rgb(53, 139, 0);
-} */
+}
 .bordeShadow:hover{
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .loquehayasido{
     max-width: 540px;
+}
+.fondoProfile{
+    background-color: #E1E3C6;
 }

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'IBM Plex Sans Devanagari', sans-serif;;
+}
+
 .buttonForm{
     display: flex!important;
     align-items: center!important;
@@ -6,7 +13,7 @@
     
 }
 .probando{
-    background-color: blueviolet;
+    background-color: #ABA95C;
 
 }
 .probando2{
@@ -17,10 +24,13 @@
 .probando3{
     background-color: brown;
 }
+.probando4{
+    background-color: aquamarine;
+}
 
 .signUp-pic{
-    width: 15rem;
-    height: 15rem;
+    width: 17em;
+    height: 17em;
 }
 .borderPic{
     border-radius: 50% 0% 0% 50%;
@@ -39,4 +49,7 @@
 }
 .borderShadow:hover{
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.fondoNewpost{
+    background-color: #E1E3C6;
 }

@@ -19,13 +19,13 @@ const EditEvent = (props) => {
     axios.get(`${API_URL}/api/events/${eventId}`)
     .then((response) => {
         const oneEvent = response.data;
-
         setTitle(oneEvent.title);
         setDescription(oneEvent.description);
         setDate(oneEvent.date);
         setMaterials(oneEvent.materials);
         setEventPic(oneEvent.eventPic);
     })
+    .then(console.log(eventId))
     .catch(console.log);
   }, [eventId]);
 
@@ -35,11 +35,12 @@ const EditEvent = (props) => {
     const requestBody = {title, description, date, materials, eventPic};
     axios.put(`${API_URL}/api/events/${eventId}`, requestBody)
     .then((response) => {
-        navigate(`/events/`)
+        navigate(`/events`)
     });
   };
 
   return (
+    <div>
     <div className="col-6  justify-content-center align-items-center mt-5  borderShadow ps-5">
     <form className="col-12 g-4 justify-content-center align-items-center ps-5" onSubmit={handleFormSubmitE}>
 
@@ -56,28 +57,15 @@ const EditEvent = (props) => {
         </div>
 
         <div className="col-8 mb-3">
-            <label htmlFor="descriptionInput" className="form-label">Description</label>
+            <label htmlFor="descriptionInput" className="form-label">Description:</label>
             <input 
             type="text" 
-            className="form-control" 
-            placeholder="Crochet, Macrame or knitting" 
+            className="form-control"
             id="descriptionInput"
             name="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}></input>
         </div>
-
-        {/* <div className="col-8 mb-3">
-            <label htmlFor="authorInput" className="form-label">Author:</label>
-            <input 
-            type="text" 
-            className="form-control" 
-            placeholder="author" 
-            id="authorInput"
-            name="author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}></input>
-        </div> */}
 
 
         <div className="col-8 mb-3">
@@ -119,13 +107,14 @@ const EditEvent = (props) => {
             
 
             <div className=''>
-                <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Create</button>
+                <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Edit!</button>
             </div>
         </div>
 
     </form>
 </div>
+</div>
   )
 }
 
-export default EditEvent
+export default EditEvent;

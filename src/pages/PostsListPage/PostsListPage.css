@@ -1,6 +1,6 @@
 
 .fondo{
-    background-color: blue;
+    background-color: #ABA95C;
 }
 .fondo2{
     background-color: chocolate;
@@ -9,12 +9,15 @@
     background-color: darkviolet;
 }
 .picForCard{
-    height: 18rem!important;
-    width: 21rem!important;  
+    height: 35vh!important;
+    width: 23vw!important;  
 }
 .picForCard2{
     height: 200px;
 }
 .shadowBorde:hover{
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.fondoPosts{
+    background-color: #E1E3C6;
 }

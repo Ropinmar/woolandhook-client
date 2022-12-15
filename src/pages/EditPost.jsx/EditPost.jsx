@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-
+import { ThemeContext } from "../../context/theme.context";
+import "./EditPost.css"
 const API_URL = process.env.REACT_APP_SERVER_URL;
 
 const EditPost = (props) => {
@@ -11,6 +12,8 @@ const EditPost = (props) => {
   const [image, setImage] = useState("");
   const [date, setDate] = useState("");
   const { postId } = useParams();
+
+  const { theme } = useContext(ThemeContext);
 
   const navigate = useNavigate()
 
@@ -42,11 +45,12 @@ const EditPost = (props) => {
   }
   
   return (
-    <div>
-      <div className="col-7 justify-content-center align-items-center mt-5 probando2">
-            <form className="col-12 g-4 justify-content-center align-items-center " onSubmit={handleFormSubmit}>
+    <div className="container-fluid px-5 probando">
+    <div className={"container-fluid row d-flex justify-content-center align-items-center p-2 pb-4 " + theme}>
+      <div className="col-6 d-flex justify-content-center align-items-center fondoEdit2 p-3 rounded">
+            <form className="col-12 light p-4 m-0" onSubmit={handleFormSubmit}>
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="titleInput" className="form-label">Title:</label>
                     <input 
                     type="text" 
@@ -58,7 +62,7 @@ const EditPost = (props) => {
                     onChange={(e) => setTitle(e.target.value)}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="wovenInput" className="form-label">Wovencraft</label>
                     <input 
                     type="text" 
@@ -70,7 +74,7 @@ const EditPost = (props) => {
                     onChange={(e) => setWovenCraft(e.target.value)}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="textInput" className="form-label">Text about</label>
                     <input 
                     type="text" 
@@ -82,7 +86,7 @@ const EditPost = (props) => {
                     onChange={(e) => setText(e.target.value)}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="imageInput" className="form-label">Image</label>
                     <input 
                     type="text" 
@@ -95,7 +99,7 @@ const EditPost = (props) => {
                     {/* <img src={image} alt="" id="image" value={image} onChange={(e) => setImage(e.target.value)}/> */}
                 </div>
 
-                <div className="col-8 buttonForm">
+                <div className="col-12 buttonForm">
                     <div className="mb-3 dateInput">
                         <label htmlFor="dateInput" className="form-label">Date</label>
                         <input 
@@ -116,6 +120,7 @@ const EditPost = (props) => {
             </form>
         </div>
 
+    </div>
     </div>
   )
 }

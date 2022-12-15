@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
+import { AuthContext } from "./context/auth.context";
+import { useContext } from "react";
 import HomePage from "./pages/HomePage/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
@@ -20,6 +21,7 @@ import EditEvent from "./pages/EditEvent/EditEvent";
 
 
 function App() {
+  const { isLoggedIn } = useContext(AuthContext);
   return (
     <div className="App container-fluid" >
     {/* style={{backgroundColor: "black"}} */}
@@ -27,7 +29,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-
+    
         <Route
           path="/profile"
           element={
@@ -36,6 +38,7 @@ function App() {
             </IsPrivate>
           }
         />
+       
           {/* IsPrivate es que profile esta en props.children */}
         <Route
           path="/signup"
@@ -54,6 +57,9 @@ function App() {
           }
         />
         <Route path="/main" element={<MainPage />}/>
+        {isLoggedIn && (
+          <>
+        
         <Route path="/profile" element={<ProfilePage />}/>
         <Route path="/new-post" element={<NewPost />} />
         <Route path="/posts" element={<PostsListPage />}/>
@@ -63,7 +69,8 @@ function App() {
         <Route path="/new-event" element={<NewEvent/> } />
         <Route path="/edit-event/:id" element={<EditEvent /> } />
         <Route path="/new-comment" element={<NewComment />}/>
-                
+        </>
+        )}
       </Routes>
     </div>
   );

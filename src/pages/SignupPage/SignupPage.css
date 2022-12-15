@@ -1,12 +1,22 @@
 .fondoSignup{
-    background-color: #ABA95C;
+    background-color: #5C5E36;
 }
 .colorFondo{
     background-color: brown;
 }
-.colorFondo2{
+.light{
     background-color: #E1E3C6;
+}
+.dark{
+    background-color: #293737;
 }
 .colorFondo3{
     background-color: rgb(52, 42, 165);
+}
+.buttonSign{
+    background-color: #ABA95C;
+}
+.buttonSign:hover{
+    background-color: #5C5E36;
+    color: white;
 }

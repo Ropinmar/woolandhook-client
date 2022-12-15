@@ -6,6 +6,7 @@ import "./EditEvent.css";
 const API_URL = process.env.REACT_APP_SERVER_URL;
 
 const EditEvent = (props) => {
+    console.log(props)
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [date, setDate] = useState("");

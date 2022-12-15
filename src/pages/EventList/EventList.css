@@ -10,11 +10,14 @@
 .fondoColor4{
     background-color: gold;
 }
-.fondoEvents{
+.light{
     background-color: #E1E3C6;
 }
+.dark{
+    background-color: #293737;
+}
 .bordeEvent{
-    background-color: #ABA95C;
+    background-color: #5C5E36;
 }
 .bordeEvent2{
     background-color: white;

@@ -34,6 +34,9 @@
   .fondoNavbar{
     background-color: #AB5C61;
   }
+  .dark{
+    background-color: #5F6A73;
+  }
   .borderPic{
     border: 1px solid rgba(255, 255, 255, 0.5);
   }

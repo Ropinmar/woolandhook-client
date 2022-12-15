@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import "./ProfilePage.css";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
+import { ThemeContext } from "../../context/theme.context";
 
 function ProfilePage() {
+  const { theme } = useContext(ThemeContext);
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   return (
-    <div className="container-fluid p-0 fondoProfile">
+    <div className="container-fluid px-5 probando">
+    <div className={"container-fluid p-0 fondoProfile " + theme}>
       
       <div className="row">
           <div className="col-6 p-5">
@@ -59,6 +62,7 @@ function ProfilePage() {
           
       </div>
       
+    </div>
     </div>
   );
 }

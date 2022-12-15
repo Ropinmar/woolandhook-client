@@ -3,11 +3,14 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import authService from "../../services/auth.service";
+import { ThemeContext } from "../../context/theme.context";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
+//using the theme for dark
+  const { theme } = useContext(ThemeContext);
 
   const navigate = useNavigate();
 
@@ -35,7 +38,7 @@ function LoginPage() {
         // and at last navigate to the home page
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate("/profile");
+        navigate("/main");
       })
       .catch((error) => {
         // If the request resolves with an error, set the error message in the state
@@ -45,33 +48,15 @@ function LoginPage() {
   };
 
   return (
-    <div className="loginPage row m-0 p-5 mb-5 container-fluid">
-      <h1 className="text-button">Login</h1>
+    <div className="container-fluid px-5 probando">
+    <div className={"col-12 container-fluid p-5 d-flex justify-content-center align-items-center " + theme}>
 
-      {/* <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
-
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
-
-        <button type="submit">Login</button>
-      </form>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-      <p>Don't have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link> */}
-
-
-      <div className="container fondoLogin col-6">
-        <div className="row justify-content-center align-items-center">
-        <div className="col-6 ">
-          <form onSubmit={handleLoginSubmit}>
+      <div className="borderLogin rounded col-6">
+      <div className="col light m-3 p-1">
+        
+        <div className="col-10 loginColor2 ms-5 rounded">
+          <form onSubmit={handleLoginSubmit} className="m-3">
+            <h1 className="text-button">Login</h1>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">Email address:</label>
               <input type="email"  name="email" value={email} onChange={handleEmail} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -86,25 +71,20 @@ function LoginPage() {
               onChange={handlePassword}className="form-control" id="exampleInputPassword1" />
             </div>
 
-            {/* <div className="mb-3 form-check">
-              <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-              <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-            </div> */}
-            <button type="submit" className="btn btn-outline-ligth buttonStart">Submit</button>
+            <button type="submit" className="btn btn-outline-ligth buttonSign m-3">Enter</button>
           </form>
           </div>
           
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <div className="container-fluid login-footer col-7">
             <p>Don't have an account yet?</p>
-            <Link to={"/signup"}> <button className="btn btn-outline-ligth btn-lg buttonStart">Sign Up</button></Link>
+            <Link to={"/signup"}> <button className="btn btn-outline-light btn-md mb-2 buttonSign">Sign Up</button></Link>
           </div>
           
         </div>
       </div>
-    </div>
-    
-    
+      </div>
+      </div>
   );
 }
 

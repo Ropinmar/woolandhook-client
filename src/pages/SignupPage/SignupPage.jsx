@@ -1,7 +1,8 @@
 import "./SignupPage.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../../services/auth.service";
+import { ThemeContext } from "../../context/theme.context";
 
 function SignupPage() {
   const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ function SignupPage() {
   const [aboutUser, setAboutUser] = useState("");
   const [profilePic, setProfilePic] = useState("")
   const [errorMessage, setErrorMessage] = useState(undefined);
+  const { theme } = useContext(ThemeContext);
 
   const navigate = useNavigate();
 
@@ -55,10 +57,11 @@ function SignupPage() {
   };
 
   return (
-    <div className="container-fluid row colorFondo2 d-flex justify-content-center align-items-center">
+    <div className="container-fluid px-5 probando">
+    <div className={"container-fluid row colorFondo2 d-flex justify-content-center align-items-center " + theme}>
 
       <div className="col-6 fondoSignup d-flex justify-content-center align-items-center p-3 px-4 m-3 rounded">
-      <form className="row justify-content-center colorFondo2 p-4" onSubmit={handleSignupSubmit}>
+      <form className="row justify-content-center light p-4" onSubmit={handleSignupSubmit}>
                     
                 <div className="col-12 mb-1">
                     <h1>Sign Up</h1>
@@ -150,8 +153,8 @@ function SignupPage() {
                     </div>
                     
 
-                    <div className=''>
-                        <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Sign up!</button>
+                    <div className='col-8'>
+                        <button className="btn btn-outline-ligth mx-2 mt-3 buttonSign" type="submit">Done!</button>
                     </div>
                 </div>
 
@@ -160,9 +163,10 @@ function SignupPage() {
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
             <br></br>
-            <div className="col-8 m-2">
-              <button>buenas</button>
+            <div className="col-8 m-5 btn borde">
+              <Link to="/login"><button className="btn btn-light borde buttonSign">If you have an account click here!</button></Link>
             </div>
+    </div>
     </div>
   );
 }

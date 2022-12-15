@@ -11,6 +11,21 @@
 .forDown{
     border-radius: 30% 80% 5% 5%;
 }
-.fondoNewevent{
+.light{
     background-color: #E1E3C6;
+}
+.dark{
+    background-color: #293737;
+}
+.colorF{
+    background-color: aqua;
+}
+.colorF2{
+    background-color: darkgoldenrod;
+}
+.colorF3{
+    background-color: #5C5E36;
+}
+.fondoOscuro{
+    background-color: rgba(0, 0, 0, 0.3);
 }

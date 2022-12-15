@@ -5,7 +5,7 @@
     font-family:'IBM Plex Sans Devanagari', sans-serif;;
 }
 .fondo-color{
-background-color: #ABA95C;
+background-color: #5C5E36;
 }
 .fondo-color2{
     background-color: rgb(139, 0, 139);
@@ -24,5 +24,11 @@ background-color: #ABA95C;
     max-width: 540px;
 }
 .fondoProfile{
+    background-color: white;
+}
+.light{
     background-color: #E1E3C6;
+}
+.dark{
+    background-color: #293737;
 }

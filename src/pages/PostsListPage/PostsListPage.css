@@ -1,6 +1,11 @@
-
+.light{
+    background-color: #E1E3C6;
+}
+.dark{
+    background-color: #293737;
+}
 .fondo{
-    background-color: #ABA95C;
+    background-color: #5C5E36;
 }
 .fondo2{
     background-color: chocolate;
@@ -9,8 +14,8 @@
     background-color: darkviolet;
 }
 .picForCard{
-    height: 35vh!important;
-    width: 23vw!important;  
+    height: 33vh!important;
+    width: 22vw!important;  
 }
 .picForCard2{
     height: 200px;
@@ -20,4 +25,7 @@
 }
 .fondoPosts{
     background-color: #E1E3C6;
+}
+.btnSign:hover{
+    background-color: #ABA95C;
 }

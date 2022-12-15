@@ -1,14 +1,16 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
 import "./HomePage.css";
+import { Link } from "react-router-dom"
 
 function HomePage() {
-  const value = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className={"container-fluid row d-flex justify-content-center align-items-center m-0 p-2 bordePic " + value}>
+    <div className="container-fluid px-5 probando">
+    <div className={"container-fluid row d-flex justify-content-center align-items-center m-0 p-2 bordePic " + theme}>
       <div className="col-7 container flex-column bordeShadow justify-content-center align-items-center p-4 px-3 backgroundCover rounded">
         
-            <div className={"row h-100 m-0 p-1 fondoText rounded " + value}>
+            <div className={"row h-100 m-0 p-1 fondoText rounded " + theme}>
                 
               <div className="col-6 p-1 m-0">
                   <img className="picHomePage picHomeSize p-0 m-0" src="./images/ovillos.jpg" alt="woolPic" />
@@ -24,7 +26,7 @@ function HomePage() {
                 </div>
               <br></br>
                 <div className="col-1 p-0 m-0">
-                  <button className="btn buttonStart"><a href="/login" className="linkHome"><h6 className="text-button">Get started!</h6></a></button>
+                  <button className="btn buttonStart"><Link to="/login" className="linkHome"><h6 className="text-button">Get started!</h6></Link></button>
                 </div> 
               </div>
 
@@ -39,6 +41,7 @@ function HomePage() {
               
             </div>
       </div>
+    </div>
     </div>
   );
 }

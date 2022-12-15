@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import "./NewEvent.css"
+import "./NewEvent.css";
+import { ThemeContext } from "../../context/theme.context";
 const API_URL = process.env.REACT_APP_SERVER_URL;
 
 const NewEvent = () => {
@@ -11,6 +12,8 @@ const NewEvent = () => {
   const [materials, setMaterials] = useState("");
   const [eventPic, setEventPic] = useState("");
   // const [author, setAuthor] = useState("");
+
+  const { theme } = useContext(ThemeContext);
 
   const  navigate = useNavigate();
 
@@ -29,13 +32,14 @@ const NewEvent = () => {
     }
   }
   return (
-    <div className="container-fluid row-12 d-flex h-100 w-100 fondoNewevent">
+    <div className="container-fluid px-5 probando">
+    <div className={"container-fluid row-12 d-flex h-100 w-100 " + theme }>
 
 
-      <div className="row mt-5 mb-5 p-5 container flex-column borderShadow">
+      <div className="col mt-3 mb-5 p-2 borderShadow h-75">
 
 
-          <div className="row">
+          <div className={"row p-5 mx-3 mt-4 " + theme}>
               <div className="col-6 p-0 m-0">
                   <img src="./images/new-event1.jpg" alt="" className="img-fluid size-pic-event forLeft"></img>
               </div>
@@ -50,10 +54,11 @@ const NewEvent = () => {
           </div>
       </div>
     
-      <div className="col-6  justify-content-center align-items-center mt-5 mb-5 borderShadow ps-5">
-            <form className="col-12 g-4 justify-content-center align-items-center ps-5" onSubmit={handleSubmit}>
-
-                <div className="col-8 mb-3">
+      <div className="col-5  colorF3 p-3 borderShadow rounded h-75 m-2">
+            <div className={"light col-12 container pt-2 p-3 d-flex justify-content-center align-items-center "}> 
+            <form className={"fondoOscuro col-8 rounded p-1 mb-0 pb-0"} onSubmit={handleSubmit}>
+                <div className="col-12 pt-2 text-center"><h2>New Event</h2></div>
+                <div className="col-12 mb-3">
                     <label htmlFor="titleInputEvent" className="form-label">Title:</label>
                     <input 
                     type="text" 
@@ -65,7 +70,7 @@ const NewEvent = () => {
                     onChange={(e) => setTitle(e.target.value)}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="descriptionInput" className="form-label">Description:</label>
                     <input 
                     type="text" 
@@ -76,7 +81,7 @@ const NewEvent = () => {
                     onChange={(e) => setDescription(e.target.value)}></input>
                 </div>
 
-                {/* <div className="col-8 mb-3">
+                {/* <div className="col-12 mb-3">
                     <label htmlFor="authorInput" className="form-label">Author:</label>
                     <input 
                     type="text" 
@@ -89,7 +94,7 @@ const NewEvent = () => {
                 </div> */}
 
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="materialsInput" className="form-label">Materials:</label>
                     <input 
                     type="text" 
@@ -101,7 +106,7 @@ const NewEvent = () => {
                     onChange={(e) => setMaterials(e.target.value)}></input>
                 </div>
 
-                <div className="col-8 mb-3">
+                <div className="col-12 mb-3">
                     <label htmlFor="imageInputEvent" className="form-label">Image:</label>
                     <input 
                     type="text" 
@@ -114,7 +119,7 @@ const NewEvent = () => {
                     {/* <img src={image} alt="" id="image" value={image} onChange={(e) => setImage(e.target.value)}/> */}
                 </div>
 
-                <div className="col-8 buttonForm">
+                <div className="col-12 buttonForm">
                     <div className="mb-3 dateInput">
                         <label htmlFor="dateInputEvent" className="form-label">Date</label>
                         <input 
@@ -133,7 +138,10 @@ const NewEvent = () => {
                 </div>
 
             </form>
+            </div>
+            
         </div>
+    </div>
     </div>
   )
 }

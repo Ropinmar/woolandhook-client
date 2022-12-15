@@ -3,7 +3,7 @@ import "./ProfilePage.css";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
 import { ThemeContext } from "../../context/theme.context";
-
+import moment from "moment";
 function ProfilePage() {
   const { theme } = useContext(ThemeContext);
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
@@ -19,15 +19,15 @@ function ProfilePage() {
               <div className="container">
                 <div className="col  m-4 bordeShadow fondo-color p-2 pb-1 rounded">
                   <div className="fondoProfile m-0 rounded">
-                  <h1>{user.name}</h1>
-                  <h1>{user.lastName}</h1>
-                  <h4>{user.dateOfBirth}</h4>
+                  <h1>Name: {user.name} {user.lastName}</h1>
+                  
+                  <h4>Birth: {moment(user.dateOfBirth).format("DD/MM/YYYY")}</h4>
                   </div>
                 </div>
               
                 <div className="col m-4 bordeShadow fondo-color p-2 rounded">
                   <div className="rounded fondoProfile pb-1">
-                    <p>{user.aboutUser}
+                    <p>Something about me: {user.aboutUser}
                     </p>
                   </div>
                 </div>

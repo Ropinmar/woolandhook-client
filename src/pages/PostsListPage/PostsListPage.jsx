@@ -75,13 +75,13 @@ const PostsListPage = (props) => {
                   <div className="card-body p-0">
                     <div className="row p-4 m-2 d-flex justify-content-start align-items-center">
                        <div className="col-8">
-                        <h2 className="card-title">{post.title[0].toUpperCase() + post.title.substring(1)}</h2>
+                        <h2 className="card-title">Title: {post.title[0].toUpperCase() + post.title.substring(1)}</h2>
                       </div>
                       <div className="col-8">
-                        <h4><strong>{post.author} </strong>- {post.wovenCraft}</h4>
+                        <h4><strong>{post.author} </strong>Kind of wovencraft: {post.wovenCraft}</h4>
                       </div>
                       <div className="col-8">
-                        <p className="card-text">{post.text}</p>
+                        <p className="card-text">info: {post.text}</p>
                       </div>
                     </div>
                     <div className="d-flex justify-content-between align-items-center col">
@@ -134,9 +134,7 @@ const PostsListPage = (props) => {
                           </div>
                       </div>
 
-                      {/* <Link to="/new-comment"></Link> */}
-                        {/* <h6 className="card-link" ><a href="/new-comment">New Comment</a></h6> */}
-                        
+                     
                     </div>
 
                   </div>

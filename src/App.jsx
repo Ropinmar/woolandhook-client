@@ -67,7 +67,7 @@ function App() {
         <Route path="/edit-post/:postId" element={<EditPost />} />
         <Route path="/events" element={<EventList /> } />
         <Route path="/new-event" element={<NewEvent/> } />
-        <Route path="/edit-event/:id" element={<EditEvent /> } />
+        <Route path="/edit-event/:eventId" element={<EditEvent /> } />
         <Route path="/new-comment" element={<NewComment />}/>
         </>
         )}

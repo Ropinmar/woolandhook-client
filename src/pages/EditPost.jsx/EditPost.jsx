@@ -12,11 +12,11 @@ const EditPost = (props) => {
   const [image, setImage] = useState("");
   const [date, setDate] = useState("");
   const { postId } = useParams();
-
+  // useContex to change the background 
   const { theme } = useContext(ThemeContext);
 
   const navigate = useNavigate()
-
+  // getting data to edit
   useEffect(() => {
 
     axios.get(`${API_URL}/api/posts/${postId}`)
@@ -30,11 +30,11 @@ const EditPost = (props) => {
     })
     .catch(console.log);
   }, [postId]);
-
+  //form control 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    //info from body
+    //info from body = form
     const requestBody = {title, wovenCraft, text, image, date};
 
     //request to update the post
@@ -46,81 +46,81 @@ const EditPost = (props) => {
   
   return (
     <div className="container-fluid px-5 probando">
-    <div className={"container-fluid row d-flex justify-content-center align-items-center p-2 pb-4 " + theme}>
-      <div className="col-6 d-flex justify-content-center align-items-center fondoEdit2 p-3 rounded">
-            <form className="col-12 light p-4 m-0" onSubmit={handleFormSubmit}>
+      <div className={"container-fluid row d-flex justify-content-center align-items-center p-2 pb-4 " + theme}>
+        <div className="col-6 d-flex justify-content-center align-items-center fondoEdit2 p-3 rounded">
+              <form className="col-12 light p-4 m-0" onSubmit={handleFormSubmit}>
 
-                <div className="col-12 mb-3">
-                    <label htmlFor="titleInput" className="form-label">Title:</label>
-                    <input 
-                    type="text" 
-                    className="form-control" 
-                    placeholder="New post" 
-                    id="titleInput"
-                    name="title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}></input>
-                </div>
+                  <div className="col-12 mb-3">
+                      <label htmlFor="titleInput" className="form-label">Title:</label>
+                      <input 
+                      type="text" 
+                      className="form-control" 
+                      placeholder="New post" 
+                      id="titleInput"
+                      name="title"
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}></input>
+                  </div>
 
-                <div className="col-12 mb-3">
-                    <label htmlFor="wovenInput" className="form-label">Wovencraft</label>
-                    <input 
-                    type="text" 
-                    className="form-control" 
-                    placeholder="Crochet, Macrame or knitting" 
-                    id="wovenInput"
-                    name="wovenCraft"
-                    value={wovenCraft}
-                    onChange={(e) => setWovenCraft(e.target.value)}></input>
-                </div>
+                  <div className="col-12 mb-3">
+                      <label htmlFor="wovenInput" className="form-label">Wovencraft</label>
+                      <input 
+                      type="text" 
+                      className="form-control" 
+                      placeholder="Crochet, Macrame or knitting" 
+                      id="wovenInput"
+                      name="wovenCraft"
+                      value={wovenCraft}
+                      onChange={(e) => setWovenCraft(e.target.value)}></input>
+                  </div>
 
-                <div className="col-12 mb-3">
-                    <label htmlFor="textInput" className="form-label">Text about</label>
-                    <input 
-                    type="text" 
-                    className="form-control" 
-                    placeholder="New post" 
-                    id="textInput"
-                    name="text"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}></input>
-                </div>
+                  <div className="col-12 mb-3">
+                      <label htmlFor="textInput" className="form-label">Text about</label>
+                      <input 
+                      type="text" 
+                      className="form-control" 
+                      placeholder="New post" 
+                      id="textInput"
+                      name="text"
+                      value={text}
+                      onChange={(e) => setText(e.target.value)}></input>
+                  </div>
 
-                <div className="col-12 mb-3">
-                    <label htmlFor="imageInput" className="form-label">Image</label>
-                    <input 
-                    type="text" 
-                    className="form-control" 
-                    placeholder="New post" 
-                    id="imageInput"
-                    name="image"
-                    value={image}
-                    onChange={(e) => setImage(e.target.value)}></input>
-                    {/* <img src={image} alt="" id="image" value={image} onChange={(e) => setImage(e.target.value)}/> */}
-                </div>
+                  <div className="col-12 mb-3">
+                      <label htmlFor="imageInput" className="form-label">Image</label>
+                      <input 
+                      type="text" 
+                      className="form-control" 
+                      placeholder="New post" 
+                      id="imageInput"
+                      name="image"
+                      value={image}
+                      onChange={(e) => setImage(e.target.value)}></input>
+                      {/* <img src={image} alt="" id="image" value={image} onChange={(e) => setImage(e.target.value)}/> */}
+                  </div>
 
-                <div className="col-12 buttonForm">
-                    <div className="mb-3 dateInput">
-                        <label htmlFor="dateInput" className="form-label">Date</label>
-                        <input 
-                        className="form-control" 
-                        type="date" 
-                        name="date" 
-                        id="dateInput"
-                        value={date}
-                        onChange={(e) => setDate(e.target.value)}></input>
-                    </div>
-                    
+                  <div className="col-12 buttonForm">
+                      <div className="mb-3 dateInput">
+                          <label htmlFor="dateInput" className="form-label">Date</label>
+                          <input 
+                          className="form-control" 
+                          type="date" 
+                          name="date" 
+                          id="dateInput"
+                          value={date}
+                          onChange={(e) => setDate(e.target.value)}></input>
+                      </div>
+                      
 
-                    <div className=''>
-                        <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Edit!</button>
-                    </div>
-                </div>
+                      <div className=''>
+                          <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Edit!</button>
+                      </div>
+                  </div>
 
-            </form>
+              </form>
         </div>
 
-    </div>
+      </div>
     </div>
   )
 }

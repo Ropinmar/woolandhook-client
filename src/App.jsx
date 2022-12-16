@@ -7,7 +7,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import PostsListPage from "./pages/PostsListPage/PostsListPage"
-import PostDetails from "./pages/PostDetails/PostDetails"
+
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
 import IsAnon from "./components/IsAnon/IsAnon";
@@ -64,7 +64,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />}/>
         <Route path="/new-post" element={<NewPost />} />
         <Route path="/posts" element={<PostsListPage />}/>
-        <Route path="/posts/:id" element={<PostDetails />} />
+       
         <Route path="/edit-post/:postId" element={<EditPost />} />
         <Route path="/events" element={<EventList /> } />
         <Route path="/new-event" element={<NewEvent/> } />

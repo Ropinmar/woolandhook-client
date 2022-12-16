@@ -6,6 +6,7 @@
 }
 .fondo{
     background-color: #5C5E36;
+    border:3px solid rgba(255, 255, 255, 0.5)
 }
 .fondo2{
     background-color: chocolate;
@@ -15,7 +16,7 @@
 }
 .picForCard{
     height: 40vh!important;
-    width: 20vw!important;  
+    width: 25vw!important;  
 }
 .picForCard2{
     height: 200px;

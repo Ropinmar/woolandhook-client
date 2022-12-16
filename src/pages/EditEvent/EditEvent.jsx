@@ -6,6 +6,7 @@ import { ThemeContext } from "../../context/theme.context";
 const API_URL = process.env.REACT_APP_SERVER_URL;
 
 const EditEvent = (props) => {
+
     console.log(props)
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -13,25 +14,25 @@ const EditEvent = (props) => {
     const [materials, setMaterials] = useState("");
     const [eventPic, setEventPic] = useState("");
     const { eventId } = useParams();
+    //useNavigate 
+    const navigate = useNavigate();
+    //theme for chance background
+    const { theme } = useContext(ThemeContext);
 
-  const navigate = useNavigate();
-
-  const { theme } = useContext(ThemeContext);
-
-  useEffect (() => {
-    axios.get(`${API_URL}/api/events/${eventId}`)
-    .then((response) => {
-        const oneEvent = response.data;
-        setTitle(oneEvent.title);
-        setDescription(oneEvent.description);
-        setDate(oneEvent.date);
-        setMaterials(oneEvent.materials);
-        setEventPic(oneEvent.eventPic);
-    })
-    .then(console.log(eventId))
-    .catch(console.log);
-  }, [eventId]);
-
+    useEffect (() => {
+        axios.get(`${API_URL}/api/events/${eventId}`)
+        .then((response) => {
+            const oneEvent = response.data;
+            setTitle(oneEvent.title);
+            setDescription(oneEvent.description);
+            setDate(oneEvent.date);
+            setMaterials(oneEvent.materials);
+            setEventPic(oneEvent.eventPic);
+        })
+        .then(console.log(eventId))
+        .catch(console.log);
+    }, [eventId]);
+// form control for editing, getting data from body and then putting in the code
   const handleFormSubmitE = (e) => {
     e.preventDefault();
 
@@ -43,6 +44,7 @@ const EditEvent = (props) => {
   };
 
   return (
+    // form for editing the event 
     <div className="container-fluid row px-5 m-0 probando">
         <div className={"container prueba2 d-flex justify-content-center align-items-center row pb-4 " + theme}>
             <div className="col-7 p-3  justify-content-center align-items-center mt-4  borderShadow prueba rounded">

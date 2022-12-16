@@ -49,42 +49,43 @@ function LoginPage() {
 
   return (
     <div className="container-fluid px-5 probando">
-    <div className={"col-12 container-fluid p-5 d-flex justify-content-center align-items-center " + theme}>
+      <div className={"col-12 container-fluid p-4 d-flex justify-content-center align-items-center " + theme}>
 
-      <div className="borderLogin rounded col-6">
-      <div className="col light m-3 p-1">
-        
-        <div className="col-10 loginColor2 ms-5 rounded">
-          <form onSubmit={handleLoginSubmit} className="m-3">
-            <h1 className="text-button">Login</h1>
-            <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">Email address:</label>
-              <input type="email"  name="email" value={email} onChange={handleEmail} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-              <input 
-              type="password" 
-              name="password"
-              value={password}
-              onChange={handlePassword}className="form-control" id="exampleInputPassword1" />
-            </div>
-
-            <button type="submit" className="btn btn-outline-ligth buttonSign m-3">Enter</button>
-          </form>
-          </div>
+        <div className="borderLogin rounded col-6 m-5">
+          <div className="col light m-3 p-1">
           
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <div className="container-fluid login-footer col-7">
-            <p>Don't have an account yet?</p>
-            <Link to={"/signup"}> <button className="btn btn-outline-light btn-md mb-2 buttonSign">Sign Up</button></Link>
+            <div className="col-10 loginColor2 ms-5 rounded">
+              <form onSubmit={handleLoginSubmit} className="m-3">
+                <h1 className="text-button">Login</h1>
+                <div className="mb-3">
+                  <label htmlFor="exampleInputEmail1" className="form-label">Email address:</label>
+                  <input type="email"  name="email" value={email} onChange={handleEmail} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                </div>
+
+                <div className="mb-3">
+                  <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                  <input 
+                  type="password" 
+                  name="password"
+                  value={password}
+                  onChange={handlePassword}className="form-control" id="exampleInputPassword1" />
+                </div>
+
+                <button type="submit" className="btn btn-outline-ligth buttonSign m-3">Enter</button>
+              </form>
+            </div>
+            
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            <div className="container-fluid login-footer col-7">
+              <p>Don't have an account yet?</p>
+              <Link to={"/signup"}> <button className="btn btn-outline-light btn-md mb-2 buttonSign">Sign Up</button></Link>
+            </div>
+            
           </div>
-          
         </div>
+
       </div>
-      </div>
-      </div>
+    </div>
   );
 }
 

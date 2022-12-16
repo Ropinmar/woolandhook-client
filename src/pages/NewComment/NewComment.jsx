@@ -39,6 +39,7 @@ const NewComment = (props) => {
   return (
     <div className="row p-0">
         <form onSubmit={handleSubmit} className=" col">
+        
             <label><h6>What do you think?</h6></label>
             <input 
             type="text" 
@@ -47,6 +48,7 @@ const NewComment = (props) => {
             onChange={(e) => setContent(e.target.value)}
             className="rounded col-10">
             </input>
+
             <div  className="col-12d-flex align-items-center justify-content-between mt-1 p-1">
                 <label><h6 className="btn">Post</h6></label>
                 <select onChange={(e) => setIdPost(e.target.value)} className="btn btn-light border rounded  btn-sm">

@@ -69,7 +69,7 @@ const NewPost = () => {
                         <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="New post" 
+                        placeholder="Name of your post" 
                         id="titleInput"
                         name="title"
                         value={title}
@@ -93,7 +93,7 @@ const NewPost = () => {
                         <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="New post" 
+                        placeholder="What is your post about?" 
                         id="textInput"
                         name="text"
                         value={text}
@@ -105,7 +105,7 @@ const NewPost = () => {
                         <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="New post" 
+                        placeholder="Paste here the url" 
                         id="imageInput"
                         name="image"
                         value={image}

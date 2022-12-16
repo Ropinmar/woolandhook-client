@@ -58,13 +58,13 @@ const NewPost = () => {
     <div className="container-fluid px-5 probando">
         <div className={"container-fluid row-12 d-flex justify-content-center align-items-center h-100 fondoNewpost p-3 m-0 " + theme}>
 
-            <div className="col-5 ms-2 p-2 rounded d-flex justify-content-center align-items-center borderShadow probando-borde h-75">
-                <form className="col-12 justify-content-center align-items-center ps-5 rounded pt-3 light" onSubmit={handleSubmit}>
+            <div className="col-5 ms-2 p-3 rounded d-flex justify-content-center align-items-center borderShadow probando-borde h-75">
+                <form className={"col-12 justify-content-center align-items-center ps-5 rounded pt-3 " + theme} onSubmit={handleSubmit}>
 
-                    <div className="col-10 mb-3">
+                    <div className="col-10 mb-3 prueba">
                         <h4>New Post!</h4>
                     </div>
-                    <div className="col-10 mb-3">
+                    <div className="col-10 mb-3 prueba">
                         <label htmlFor="titleInput" className="form-label">Title:</label>
                         <input 
                         type="text" 
@@ -76,7 +76,7 @@ const NewPost = () => {
                         onChange={(e) => setTitle(e.target.value)}></input>
                     </div>
 
-                    <div className="col-10 mb-3">
+                    <div className="col-10 mb-3 prueba">
                         <label htmlFor="wovenInput" className="form-label">Wovencraft</label>
                         <input 
                         type="text" 
@@ -88,7 +88,7 @@ const NewPost = () => {
                         onChange={(e) => setWovenCraft(e.target.value)}></input>
                     </div>
 
-                    <div className="col-10 mb-3">
+                    <div className="col-10 mb-3 prueba">
                         <label htmlFor="textInput" className="form-label">Text about</label>
                         <input 
                         type="text" 
@@ -100,7 +100,7 @@ const NewPost = () => {
                         onChange={(e) => setText(e.target.value)}></input>
                     </div>
 
-                    <div className="col-10 mb-3">
+                    <div className="col-10 mb-3 prueba">
                         <label htmlFor="imageInput" className="form-label">Image</label>
                         <input 
                         type="text" 
@@ -112,8 +112,8 @@ const NewPost = () => {
                         onChange={(e) => setImage(e.target.value)}></input>
                     </div>
 
-                    <div className="col-10 buttonForm">
-                        <div className="mb-3 dateInput">
+                    <div className="col-10 mb-3 buttonForm prueba ">
+                        <div className="col-9 mb-3 dateInput">
                             <label htmlFor="dateInput" className="form-label">Date</label>
                             <input 
                             className="form-control" 
@@ -126,7 +126,7 @@ const NewPost = () => {
                         
 
                         <div className=''>
-                            <button className="btn btn-outline-ligth btn-md buttonStart mx-2 mt-3" type="submit">Create</button>
+                            <button className="btn btn-outline-ligth btn-sm buttonStart mx-1 mt-3" type="submit">Create</button>
                         </div>
                     </div>
 

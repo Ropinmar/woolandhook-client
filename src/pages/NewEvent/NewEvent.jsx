@@ -55,7 +55,7 @@ const NewEvent = () => {
             </div>
             
             <div className="col-5  colorF3 p-3 borderShadow rounded h-75 m-2">
-                <div className={"light col-12 container pt-2 p-3 d-flex justify-content-center align-items-center "}> 
+                <div className={"col-12 container pt-2 p-3 d-flex justify-content-center align-items-center " + theme}> 
                     <form className={"fondoOscuro col-8 rounded p-1 mb-0 pb-0"} onSubmit={handleSubmit}>
                             <div className="col-12 pt-2 text-center">
                                 <h2>New Event</h2>

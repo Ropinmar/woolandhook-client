@@ -9,7 +9,7 @@
     display: flex!important;
     align-items: center!important;
     justify-content: center!important;
-    margin-left: 10px;
+    
     
 }
 .probando{
@@ -38,7 +38,8 @@
     border-radius: 0% 50% 50% 0%;
 }
 .dateInput{
-    width: 80%;
+    width: 70%;
+    margin-left: 10px;
 }
 .borderShadow:hover{
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -51,5 +52,13 @@
 }
 .light{
     background-color: #E1E3C6;
+}
+.prueba{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 10px;
+}
+.prueba2{
+    background-color: chartreuse;
 }
 

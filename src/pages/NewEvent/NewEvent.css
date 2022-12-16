@@ -29,3 +29,6 @@
 .fondoOscuro{
     background-color: rgba(0, 0, 0, 0.3);
 }
+.fondoOscuro h2, label{
+    color: white;
+}

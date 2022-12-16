@@ -55,6 +55,7 @@ section{
 }
 .buttonStart{
     width: 5em;
+    color: white;
 }
 .buttonStart:hover{
     background-color: rgb(207, 85, 9);

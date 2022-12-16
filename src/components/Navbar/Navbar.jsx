@@ -23,7 +23,7 @@ function Navbar() {
                   <div className="col-3 d-flex align-items-center justify-content-center">
                     <p className="project-name">Wool and <br></br>Hook</p>
                     <NavLink className="navbar-brand" to="/">
-                          <img src="/images/main-icono.webp" width="30" alt="logo" />
+                          <img src="/images/main-icono.webp" width="30" alt="logo" />footer-logo
                     </NavLink>
                   </div>
                   <div className="col-4 d-flex align-items-center justify-content-center ">     
@@ -104,6 +104,12 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link onClick={logOutUser} className="dropdown-item text-navbar" to="/">Logout</Link>
+                                    </li>
+                                    <li>
+                                      <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item text-navbar" to="/about">About</Link>
                                     </li>
                                     <li>
                                       <hr className="dropdown-divider"/>

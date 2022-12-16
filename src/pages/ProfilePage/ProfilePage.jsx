@@ -21,7 +21,7 @@ function ProfilePage() {
                   <div className="fondoProfile m-0 rounded">
                   <h1>Name: {user.name} {user.lastName}</h1>
                   
-                  <h4>Birth: {moment(user.dateOfBirth).format("DD/MM/YYYY")}</h4>
+                  <h4>Born: {moment(user.dateOfBirth).format("DD/MM/YYYY")}</h4>
                   </div>
                 </div>
               

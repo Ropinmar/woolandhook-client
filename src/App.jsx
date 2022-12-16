@@ -18,6 +18,7 @@ import EditPost from "./pages/EditPost.jsx/EditPost";
 import EventList from "./pages/EventList/EventList";
 import NewEvent from "./pages/NewEvent/NewEvent";
 import EditEvent from "./pages/EditEvent/EditEvent";
+import About from "./pages/About/About";
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
         <Route path="/new-event" element={<NewEvent/> } />
         <Route path="/edit-event/:eventId" element={<EditEvent /> } />
         <Route path="/new-comment" element={<NewComment />}/>
+        <Route path="/about" element={<About />} />
         </>
         )}
       </Routes>

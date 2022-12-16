@@ -1,0 +1,105 @@
+.color1{
+    background-color:#5C5E36;
+}
+.color2{
+    background-color: silver;
+}
+.color3{
+    background-color:royalblue;
+}
+.contacto .container{
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+.contacto .rectangulo{
+    margin-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white;
+}
+.contacto .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contacto .descripcion{
+    color: white;
+    font-size: 1.2rem;
+}
+.contacto button{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+}
+.contacto .texto{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+}
+.contacto button:hover{
+    background-color: white;
+    color: black;
+}
+.contacto button i{
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.5s ease-in-out;
+}
+.contacto button:hover i{
+    color: black;
+}
+
+.forAbout{
+    min-height: 500px;
+}
+.footer-logo{
+height: 80px;
+width: 80px;
+margin:10px;
+}
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid #5C5E36;
+    border-radius: 50%;
+    transition: all 0.5s ease-in;
+}
+.iconos-redes-sociales svg{
+    color: black;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in;
+}
+.iconos-redes-sociales a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    color: black;
+}
+.iconos-redes-sociales a:hover i{
+    color: black;
+}
+.derechos-de-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}

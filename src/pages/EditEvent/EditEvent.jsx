@@ -43,7 +43,7 @@ const EditEvent = (props) => {
   };
 
   return (
-    <div className="container-fluid row px-5 m-0 prueba3">
+    <div className="container-fluid row px-5 m-0 probando">
         <div className={"container prueba2 d-flex justify-content-center align-items-center row pb-4 " + theme}>
             <div className="col-7 p-3  justify-content-center align-items-center mt-4  borderShadow prueba rounded">
                 <form className="col-12 g-4 justify-content-center align-items-center p-4 light" onSubmit={handleFormSubmitE}>

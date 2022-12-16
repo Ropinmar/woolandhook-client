@@ -63,17 +63,17 @@ const PostsListPage = (props) => {
 
   return (
     <div className="container-fluid px-5 probando">
-    <div  className={"container-fluid row d-flex justify-content-center m-0 p-0 pt-2  backgroundColor " + theme}>
+    <div  className={"container row d-flex justify-content-center mx-4 pt-2  backgroundColor " + theme}>
       {posts.map((post, index) => {
         return(
-          <div key={post._id} className="col-md-3 m-4 ms-5 p-2 fondo rounded">            
+          <div key={post._id} className="col-md-3 mx-5 ms-1 mb-2  p-2 fondo rounded">            
               
                 <div className="card text-start shadowBorde p-1">
                   
                     <img src={post.image} className="card-header picForCard" alt="postPic"/>
                   
                   <div className="card-body p-0">
-                    <div className="row p-4 m-2 d-flex justify-content-start align-items-center">
+                    <div className="row pb-3 pt-3 m-1 d-flex justify-content-start align-items-center">
                        <div className="col-8">
                         <h2 className="card-title">Title: {post.title[0].toUpperCase() + post.title.substring(1)}</h2>
                       </div>
@@ -111,7 +111,7 @@ const PostsListPage = (props) => {
 
 
                          {/* modal to delete */}
-                        <button type="button" className="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" className="btn btn-outline-light btn-sm col-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" className="bi bi-trash" viewBox="0 0 16 16" >
                           <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                           <path fillRule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>

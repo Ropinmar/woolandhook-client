@@ -101,7 +101,9 @@ const PostsListPage = (props) => {
                             {post.comments.map((comment) => {
                               return (
                                 <div className="col-6 card-text">
-                                  <h5 key={comment._id}>{comment.content}</h5>
+                                  <ul key={comment._id}>
+                                    <li className="col-12">{comment.content}</li>
+                                  </ul>
                                 </div>
                                 )
                             })}
